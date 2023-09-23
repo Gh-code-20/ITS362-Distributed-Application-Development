@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script type="text/javascript" src="extrnal2.js"></script>
+        <title>Problem 2</title>
+    </head>
+    <body>
+    <!-- <script>
+        function calcDiscount(){
+        var price=document.getElementById('price').value;
+        var discount=document.getElementById('discount').value;
+
+        //Check validity of inputs and calculate discount
+        var discountVal= price-(price * discount/100);
+        document.getElementById('discountp').innerHTML=validateInput(price,discount)? "Total Price After Discount: " + discountVal:"";
+    
+    }
+    //validation function that checks for no input (blank) textboxes before calculating a discount.
+
+    function validateInput(price,discount){
+        var valid=true;
+
+        if((price.length<1||discount.length<1||isNaN(price)||isNaN(discount))){
+        valid=false;
+        alert("Provide valid input, the field can not be blank");
+        }
+        else
+        {
+        valid=true;
+        }
+        return valid;
+
+    }
+    </script> -->
+    
+        <p id="demo" onclick="myFunction()"> Problem2 </p>
+        Enter Price: <input type="text" id="price" required/><br/><br/>
+        Enter Discount %: <input type="text" id="discount" required/><br/><br/>
+        <button onClick="calcDiscount()">Calculate Discount</button>
+        <p id="discountp"></p>
+
+    </body>
+</html> 

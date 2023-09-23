@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+        <title> Problem4</title>
+
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script type="text/javascript" src="http://code.jquery.com/jquery.min.js"> </script>
+        <script type="text/javascript" src="extrnal4.js" ></script>
+
+      <!--  <script type="text/javascript">
+
+        $(document).ready(function(){
+
+            //function addItemToList()
+
+            function addItemToList()
+
+            {
+
+                //taking text entered from textbox
+
+                var text=$("#txtTextbox").val();
+
+                //append item to the list
+
+                $("ul").append("<li>"+text+"</li>");
+
+            }
+
+            //function to change style of the textbox
+
+            function changeStyle()
+
+            {
+
+                $("#txtTextbox").css("border","1px dashed blue").css("background-color","aqua");
+
+            }
+
+            //attaching click event to the add item button
+
+            $("#btnAddItem").click(function(){
+
+                //function call
+
+                addItemToList();
+
+            });
+
+            //attaching click event to the change style
+
+            $("#btnchangeStyle").click(function(){
+
+                //function call
+
+                changeStyle();
+
+            });
+
+        });  
+
+    </script> -->
+
+    </head>
+
+    <body>
+        <input type="text" id="txtTextbox"/>
+
+        <br><br>
+        <input type="button" id="btnAddItem" value="add item to list"/>
+        <input type="button" id="btnchangeStyle" value="Change Style"/>  
+        <ul id="item"></ul>
+
+    </body>
+
+</html>
