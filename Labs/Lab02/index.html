@@ -1,0 +1,122 @@
+<!--Ghadir Alfadhl-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Grade Average Calculator </title>
+    <link rel= "stylesheet" href="style.css">
+    <script type="text/javascript" src="calculate.js"> </script>
+</head>
+
+<body>
+    <header>
+        <img src="images/Purdue2.png" id="logo" />
+        <h1> Purdue University Northwest</h1>    
+    </header>
+
+    <div class="wapper">
+    <br>
+    <main>
+    <p> <b> Grade Average Calculator </b></p>
+    <p>Please Enter Your Grade For Each Section</p>
+    <br>
+
+<table>
+
+    <tr>
+       <th> <b> Assessemet &ensp; &ensp; </b> </th>
+       <th> <b> Number of points Possible &ensp; </b> </th>
+       <th> <b> Number of points earned &ensp;</b> </th>
+    </tr>
+
+    <tr>
+      <td id="td1"> Lab assignment </td>
+      <td><input type="number" id="lab" size="35"></td>
+      <td>250</td>
+    </tr>
+
+    <tr>
+      <td id="td1"> Quiz </td>
+      <td><input type="number" id="quiz" width="100px"></td>
+      <td>100</td>
+    </tr>
+
+    <tr>
+      <td id="td1"> Exam </td>
+      <td><input type="number" id="exam" size="35"></td>
+      <td>200</td>
+    </tr>
+
+    <tr>
+      <td id="td1"> Project </td>         
+      <td><input type="number" id="project" size="35"></td>
+      <td>100</td>
+    </tr>
+
+    <tr>
+        <td id="td1"> Extra credits </td>
+        <td><input type="number" id="credit" ></td>
+        <td>25</td>
+    </tr>
+    <tr>
+        <td id="td1"> Participations </td>
+        <td><input type="number" id="participation" ></td>
+        <td>75</td>
+    </tr>
+
+</table>
+    <br><br>
+
+    <input type="button" onclick="calculator()" value="Calculate Your Grade" /> 
+    <br>
+    <p> Your Final Grade Is: <br>
+    <span id="resultGrade"></span>
+    </p>
+    <br>
+    <hr>
+    
+    <p> <b> The grade is determined using the table below: </b> </p>
+        <table style="background-color:burlywood; ">
+            <tr> 
+            <td> <b> Earned % Points &ensp;</b> </td>
+            <td> <b> Grade &ensp; </b> </td>
+            </tr>
+            <tr> 
+                <td id="td1"> &#8805; 90 </td>
+                <td> A </td>   
+            </tr>
+            <tr> 
+                <td id="td1"> &#8805; 80 but &#60; 90 </td>
+                <td> B </td>   
+            </tr>
+            <tr> 
+                <td id="td1"> &#8805; 70 but &#60; 80 </td>
+                <td> C </td>   
+            </tr>
+            <tr> 
+                <td id="td1"> &#8805; 60 but &#60; 70 </td>
+                <td> D </td>   
+            </tr>
+            <tr> 
+                <td id="td1"> &#60; 60 </td>
+                <td> F </td>   
+            </tr>
+            
+        </table>
+        <br>
+        <hr>
+
+         <footer>
+            Copyright &copy; Purdue University Northwest <br>
+           <a href="mailto:ghadir@pnw.edu">ghadir@pnw.edu</a>
+
+        <br><br>
+        <div>
+            <script>  document.write("This page was last modifiad on: " + document.lastModified) </script>
+         </div>
+  </footer>
+    </main>
+    </div>
+</body>
+</html>

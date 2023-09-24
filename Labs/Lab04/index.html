@@ -1,0 +1,256 @@
+<!--Ghadir Alfadhl-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> ITS362 - LAB4 </title>
+    <link rel= "stylesheet" href="style.css">
+    <script type="text/javascript" src="calculate.js"> </script>
+</head>
+
+<body>
+    <header>
+        <img src="images/Purdue2.png" id="logo" />
+        <h1> Purdue University Northwest</h1>    
+    </header>
+
+    <div class="wapper">
+    <br>
+    <main>
+    <p> <b> Grade Average Calculator </b></p>
+    <p>Please Enter Your Grade For Each Section</p>
+    <br>
+    
+    <div>
+        <table id="Grades">
+            <thead> 
+                <tr>
+                <th> <b> Assessemets&ensp; &ensp; </b> </th>
+                <th> <b> Points earend&ensp; </b> </th>
+                <th> <b> Max points &ensp;</b> </th>
+                </tr>
+                <tr>
+                    <td id="td1"><b>Assignments</b></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </thead>
+            <tbody> 
+                <tr>
+                    <td id="td1">Lab1</td>
+                    <td><input type="number" id="Lab1"></td>
+                    <td>25</td>
+                </tr>
+            
+                <tr>
+                    <td id="td1"> Lab2 </td>
+                    <td><input type="number" id="Lab2" ></td>
+                    <td>25</td>
+                </tr>
+            
+                <tr>
+                    <td id="td1"> Lab3</td>
+                    <td><input type="number" id="Lab3" ></td>
+                    <td>25</td>
+                </tr>
+
+                <tr>
+                    <td id="td1"> Lab4</td>         
+                    <td><input type="number" id="Lab4" ></td>
+                    <td>25</td>
+                </tr>
+            
+                <tr>
+                    <td id="td1"> Lab5 </td>
+                    <td><input type="number" id="Lab5" ></td>
+                    <td>25</td>
+                </tr>
+            </tbody>
+            
+            <thead>
+                    <tr>
+                        <td id="td1"><b>Quizzes </b></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+    
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td id="td1">Quiz1</td>
+                    <td><input type="number" id="Quiz1"></td>
+                    <td>10</td>
+                </tr>
+                
+                <tr>
+                    <td id="td1"> Quiz2 </td>
+                    <td><input type="number" id="Quiz2" ></td>
+                    <td>10</td>
+                </tr>
+            
+                <tr>
+                    <td id="td1"> Quiz3</td>
+                    <td><input type="number" id="Quiz3" ></td>
+                    <td>10</td>
+                </tr>
+            
+                <tr>
+                    <td id="td1"> Quiz4 </td>         
+                    <td><input type="number" id="Quiz4" ></td>
+                    <td>10</td>
+                </tr>
+            
+                <tr>
+                    <td id="td1"> Quiz5 </td>
+                    <td><input type="number" id="Quiz5" ></td>
+                    <td>10</td>
+                </tr>
+            </tbody>
+            
+            <thead> 
+                <tr>
+                    <td id="td1"><b>Exams </b></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </thead>
+            <tbody> 
+                <tr>
+                    <td id="td1">Exam1</td>
+                    <td><input type="number" id="Exam1"></td>
+                    <td>100</td>
+                </tr>
+                
+                <tr>
+                    <td id="td1"> Exam2 </td>
+                    <td><input type="number" id="Exam2" ></td>
+                    <td>100</td>
+                </tr>
+
+                <td id="td1"><b>Project</b></td>
+                    <td><input type="number" id="Project"></td>
+                    <td>100</td>
+                </tr>
+                <tr>
+                    <td id="td1"><b>Participation</b></td>
+                    <td><input type="number" id="Participation"></td>
+                    <td>50</td>
+                </tr>
+                <tr>
+                    <td id="td1"><b>ExtraCredit</b></td>
+                    <td><input type="number" id="ExtraCredit"></td>
+                    <td>25</td>
+                </tr>
+
+            </tbody>
+            
+        </table>
+    </div>
+    <br>
+    <br>
+    
+       <!--button click to get calculation for grade percent -->
+    <div>
+        <button id="Btncalc" onclick="calculatGrade()"> Calculate Your Grade </button> 
+
+     <!--button to save the grade to cookie and display-->
+     <button id="BtnSaveGrade" onclick="SaveGrade()" > Save a Grade </button>   
+    </div>
+
+     <br />
+     <br />
+      <!---to get a grade in percent-->
+     <div>
+        <label>Calculated Grade Percent: </label>
+        <input type="text" id="finalPercent" name="finalPercent" disabled>
+       <!---- <span id="finalPercent"></span> ---->
+
+        <br />
+        <br />
+          <!---to get a letter for grade -->
+        <labe>Final Letter Grade: </labe>
+        <input type="text" id="finalLetterGrade" name="finalLetterGrade" disabled>
+       <!----- <span id="finalLetterGrade"></span>----->
+    </div>
+
+    <br><br><br>
+    <p> Click the button to display the gradebook here!</p> 
+
+    <input type="button" onclick="listAllGrades()" value="List all Grades" />
+    <br> <br> 
+    <span id="listGrades"></span>
+    <br /> <br/>
+
+    <br />
+    <hr>
+    <div class="gradingScale">
+        <p><b> Total earned % points:  </b><br /> 
+        &nbsp;&nbsp;&nbsp; 30% of lab Assignments <br /> 
+        &nbsp;&nbsp;&nbsp; 10% of quizzes <br />
+        &nbsp;&nbsp;&nbsp; 30% of exams  <br /> 
+        &nbsp;&nbsp;&nbsp; 20% of project <br />
+        &nbsp;&nbsp;&nbsp; 10% of participation <br />
+        &nbsp;&nbsp;&nbsp; 5% of extra credit<br /> </p>
+    </div>
+    <br> 
+    
+    <p> <b> The grade is determined using the table below: </b> </p>
+        <table id="table2" >
+            <tr> 
+            <td> <b> Earned % Points &ensp;</b> </td>
+            <td> <b> Grade &ensp; </b> </td>
+            </tr>
+            <tr> 
+                <td id="td1"> &#8805; 90 </td>
+                <td> A </td>   
+            </tr>
+            <tr> 
+                <td id="td1"> &#8805; 80 but &#60; 90 </td>
+                <td> B </td>   
+            </tr>
+            <tr> 
+                <td id="td1"> &#8805; 70 but &#60; 80 </td>
+                <td> C </td>   
+            </tr>
+            <tr> 
+                <td id="td1"> &#8805; 60 but &#60; 70 </td>
+                <td> D </td>   
+            </tr>
+            <tr> 
+                <td id="td1"> &#60; 60 </td>
+                <td> F </td>   
+            </tr>
+            
+        </table>
+
+        <br />
+        
+
+        <br><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+        <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+        <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+    
+      
+
+         <footer>
+            Copyright &copy; Purdue University Northwest <br>
+           <a href="mailto:ghadir@pnw.edu">ghadir@pnw.edu</a>
+
+        <br><br>
+        <div>
+            <!-- <script>  
+                document.write("This page was last modifiad on: " + document.lastModified) 
+            </script> -->
+
+            <p>This document was last modified on: </p>
+            <script>
+            document.write(document.lastModified);
+            </script>
+         </div>
+  </footer>
+    </main>
+    </div>
+</body>
+</html>

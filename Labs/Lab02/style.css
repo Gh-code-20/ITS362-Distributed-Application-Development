@@ -1,0 +1,83 @@
+/*
+Ghadir Alfadhl
+Lab2
+ITS362
+01/26/2021
+
+*/
+
+
+body { 
+    background-color:#f8d6a9; 
+    color:black; 
+    font-family: Verdana, Arial, sans-serif; 
+    
+ }
+
+.wapper {
+    margin: 0 0 0 300px;
+    width: 1000px;
+    background-color: white;
+    position: relative;
+    top: -20px; 
+}
+
+header {
+    /*width: 100%; */
+    height: 14em;
+    /*background: #353331 50%; */
+    position: relative;
+    margin: 0;
+    padding: 0;
+    left: -10px;
+    top: -20px;
+    margin-right: -50px;
+    
+    /*Color Gradient */
+    background: linear-gradient(to bottom, #000000 50%, #ffe3c1 100%);
+          
+}
+
+#logo {
+    background-repeat: no-repeat;
+    max-width: 300px;
+    margin-top: 25px;
+    margin-left: 10px;
+
+}
+h1 {
+    padding-left: 500px;
+    margin-top: -140px;
+    color: rgb(247, 221, 183); 
+}
+main {
+	padding: 0em 2em 2em 2em;
+	
+}
+
+
+button {
+    align-items:center;
+       
+}
+
+table, th, td{
+    border: 1px solid rgb(0, 0, 0);
+}
+
+td {
+    text-align: center;
+}
+th {
+    text-align: left;
+}
+#td1 {
+    text-align:left;
+}
+
+input[type="number"] {
+    width: 100%;
+    box-sizing: border-box;                
+    -webkit-box-sizing:border-box;
+    -moz-box-sizing: border-box;
+}
