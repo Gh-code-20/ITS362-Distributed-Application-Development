@@ -1,0 +1,400 @@
+<!--Ghadir Alfadhl-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="Stylesheet" href="http://code.jquery.com/ui/1.10.0/themes/base/jquery-ui.css" /> 
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.9.0.js"></script>
+    <script type="text/javascript" src="http://code.jquery.com/ui/1.10.0/jquery-ui.js"></script>
+    <title> ITS362 - Lab06 </title>
+    <link rel= "stylesheet" href="extrnal6.css">
+    <script type="text/javascript" src="extrnal6.js"> </script>
+
+</head>
+
+<body>
+    <header>
+        <img src="images/Purdue2.png" id="logo" />
+        <h1> Purdue University Northwest</h1>    
+    </header>
+
+    <div class="wapper">
+    <br>
+    <main>
+    <p> <b> Grade Average Calculator </b></p>
+    <br>
+    
+        <table>
+
+            <tr>
+            <th> <b> Assessemet &ensp; &ensp; </b> </th>
+            <th> <b> Number of Assessemet &ensp; </b> </th>
+            <th> <b> Max Points per Assessemet&ensp;</b> </th>
+            <th> <b> Grade Entry &ensp;</b> </th>
+            </tr>
+    
+            <tr>
+            <td> Lab assignment </td>
+            <td> 10 </td>
+            <td>25</td>
+            <td><input type="button" id="Labs" value="Show Score"></td>
+            </tr>
+    
+            <tr>
+            <td> Quiz </td>
+            <td> 10 </td>
+            <td>10</td>
+            <td><input type="button" id="Quizzez" value="Show Score"></td>
+            </tr>
+    
+            <tr>
+            <td> Exam </td>
+            <td> 2</td>
+            <td>100</td>
+            <td><input type="button" id="Exams" value="Show Score"></td>
+            </tr>
+    
+            <tr>
+            <td > Project </td>         
+            <td> 1 </td>
+            <td>100</td>
+            <td><input type="button" id="Projes" value="Show Score"></td>
+            </tr>
+    
+            <tr>
+                <td> Extra credits </td>
+                <td> 1 </td>
+                <td>25</td>
+                <td><input type="button" id="Extra_credits" value="Show Score"></td>
+            </tr>
+            <tr>
+                <td> Participations </td>
+                <td> 1 </td>
+                <td> 5</td>
+                <td><input type="button" id="Participations" value="Show Score"></td>
+            </tr>
+           <br>
+        </table>
+        
+
+    <div onchange="calculatGrade()"> 
+        <!-----table 2---------------------------------------------------------------------->
+        <table id="table2">
+            <thead>
+                <tr>
+                    <th colspan="3" scope="colgroup"> <center> Lab Scores </center> </th>
+                </tr> 
+                <tr>
+                    <th> <b> Assignment </b> </th>
+                    <th> <b> Points Earned </b> </th>
+                </tr>
+            </thead>
+            
+        <tbody>
+            <tr>
+                <td> Lab 1 </td>
+                <td> <input type="text" id="lab1" title="Enter Lab1 score">/25 
+                <button value="Delete" onclick="deleteRow(this)">Delete row</button></td>
+            </tr>
+            <tr>
+                <td> Lab 2 </td>
+                <td><input type="text" id="lab2" title="Enter Lab2 score">/25
+                <button value="Delete" onclick="deleteRow(this)">Delete row</button></td>
+            </tr>
+            <tr>
+                <td> Lab 3 </td>
+                <td><input type="text" id="lab3" title="Enter Lab3 score">/25
+                <button value="Delete" onclick="deleteRow(this)">Delete row</button></td>
+            </tr>
+            <tr>
+                <td> Lab 4 </td>
+                <td><input type="text" id="lab4" title="Enter Lab4 score">/25
+                <button value="Delete" onclick="deleteRow(this)">Delete row</button></td>
+            </tr>
+            <tr>
+                <td> Lab 5 </td>
+                <td><input type="text" id="lab5" title="Enter Lab5 score">/25
+                <button value="Delete" onclick="deleteRow(this)">Delete row</button></td>
+            </tr>
+            <tr>
+                <td> Lab 6 </td>
+                <td><input type="text" id="lab6" title="Enter Lab6 score">/25
+                 <button value="Delete" onclick="deleteRow(this)">Delete row</button></td>
+            </tr>
+            <tr>
+                <td> Lab 7 </td>
+                <td><input type="text" id="lab7" title="Enter Lab7 score">/25
+                  <button value="Delete" onclick="deleteRow(this)">Delete row</button></td>
+            </tr>
+            <tr>
+                <td> Lab 8 </td>
+                <td><input type="text" id="lab8" title="Enter Lab8 score">/25
+                  <button value="Delete" onclick="deleteRow(this)">Delete row</button></td>
+            </tr>
+            <tr>
+                <td> Lab 9</td>
+                <td><input type="text" id="lab9" title="Enter Lab9 score">/25
+                  <button value="Delete" onclick="deleteRow(this)">Delete row</button></td>
+            </tr>
+            <tr>
+                <td> Lab 10 </td>
+                <td><input type="text" id="lab10" title="Enter Lab10 score">/25
+                 <button value="Delete" onclick="deleteRow(this)">Delete row</button></td>
+            </tr>
+        </tbody>
+        </table>
+        <br> 
+        <!-----table 3---------------------------------------------------------------------->
+       <table id="table3">
+           <thead>
+               <tr>
+                   <th colspan="3" scope="colgroup"> <center> Quiz Scores </center> </th>
+               </tr> 
+               <tr>
+                   <th> <b> Quiz </b> </th>
+                   <th> <b> Points Earned </b> </th>
+               </tr>
+           </thead>
+           
+       <tbody>
+           <tr>
+               <td> Quiz 1 </td>
+               <td><input type="text" id="quiz1" title="Enter quiz1 score">/10
+                <button value="Delete" onclick="deleteRowNow(this)">Delete row</button></td>
+           </tr>
+           <tr>
+               <td> Quiz 2</td>
+               <td><input type="text" id="quiz2" title="Enter quiz2 score">/10
+                <button value="Delete" onclick="deleteRowNow(this)">Delete row</button></td>
+           </tr>
+           <tr>
+               <td> Quiz 3 </td>
+               <td><input type="text" id="quiz3" title="Enter quiz3 score">/10
+                <button value="Delete" onclick="deleteRowNow(this)">Delete row</button></td>
+           </tr>
+           <tr>
+               <td> Quiz 4 </td>
+               <td><input type="text" id="quiz4" title="Enter quiz4 score">/10
+                <button value="Delete" onclick="deleteRowNow(this)">Delete row</button></td>
+           </tr>
+           <tr>
+               <td> Quiz 5 </td>
+               <td><input type="text" id="quiz5" title="Enter quiz5 score">/10
+                <button value="Delete" onclick="deleteRowNow(this)">Delete row</button></td>
+           </tr>
+           <tr>
+            <td> Quiz 6 </td>
+            <td><input type="text" id="quiz6" title="Enter quiz6 score">/10
+                <button value="Delete" onclick="deleteRowNow(this)">Delete row</button></td>
+        </tr>
+        <tr>
+            <td> Quiz 7 </td>
+            <td><input type="text" id="quiz7" title="Enter quiz7 score">/10
+                <button value="Delete" onclick="deleteRowNow(this)">Delete row</button></td>
+        </tr>
+        <tr>
+            <td> Quiz 8 </td>
+            <td><input type="text" id="quiz8" title="Enter quiz8 score">/10
+                <button value="Delete" onclick="deleteRowNow(this)">Delete row</button></td>
+        </tr>
+        <tr>
+            <td> Quiz 9 </td>
+            <td><input type="text" id="quiz9" title="Enter quiz9 score">/10
+                <button value="Delete" onclick="deleteRowNow(this)">Delete row</button></td>
+        </tr>
+        <tr>
+            <td> Quiz 10 </td>
+            <td><input type="text" id="quiz10" title="Enter quiz10 score">/10
+                <button value="Delete" onclick="deleteRowNow(this)">Delete row</button></td>
+        </tr>
+       </tbody>
+       </table>
+       <br> 
+       <!-----table 4---------------------------------------------------------------------->
+       <table id="table4">
+            <thead>
+            <tr>
+                <th colspan="3" scope="colgroup"> <center> Exam Scores </center> </th>
+                </tr> 
+                <tr>
+                <th> <b> Exam </b> </th>
+                <th> <b> Points Earned </b> </th>
+                </tr>
+            </thead>
+        
+           <tbody>
+                <tr>
+                    <td> Exam 1 </td>
+                    <td><input type="text" id="exam1" title="Enter exam1 score">/100
+                        <button value="Delete" onclick="DeleteRow(this)">Delete row</button></td>
+                </tr>
+                <tr>
+                    <td> Exam 2</td>
+                    <td><input type="text" id="exam2" title="Enter exam2 score">/100
+                        <button value="Delete" onclick="DeleteRow(this)">Delete row</button></td>
+                </tr>
+            </tbody>
+        </table>
+        <br><br>
+    <!-----table 5---------------------------------------------------------------------->
+        <table id="table5">
+            <thead>
+                <tr>
+                    <th colspan="3" scope="colgroup"> <center> Project Scores </center> </th>
+                </tr> 
+                <tr>
+                    <th> <b> Project </b> </th>
+                    <th> <b> Points Earned </b> </th>
+                </tr>
+            </thead>
+            
+        <tbody>
+        <tr>
+            <td> Project 1 </td>
+            <td><input type="text" id="project1" title="Enter project1 score">/100
+                <button value="Delete" onclick="delRow(this)">Delete row</button></td>
+        </tr>
+        </tbody>
+        </table>
+        <br><br>
+        <!-----table 6---------------------------------------------------------------------->
+        <table id="table6">
+            <thead>
+                <tr>
+                    <th colspan="3" scope="colgroup"> <center> Extra Credit Scores </center> </th>
+                </tr> 
+                <tr>
+                    <th> <b> Extra Credit </b> </th>
+                    <th> <b> Points Earned </b> </th>
+                </tr>
+            </thead>
+            
+        <tbody>
+            <tr>
+                <td> Extra Credit </td>
+                <td><input type="text" id="extraCredit1" title="Enter extra credit score">25
+                    <button value="Delete" onclick="DelRow(this)">Delete row</button></td>
+            </tr>
+        </tbody>
+        </table>
+        <br><br>
+        <!-----table 7---------------------------------------------------------------------->
+        <table id="table7">
+            <thead>
+                <tr>
+                    <th colspan="3" scope="colgroup"> <center> Participation Scores </center> </th>
+                </tr> 
+                <tr>
+                    <th> <b> Participation </b> </th>
+                    <th> <b> Points Earned </b> </th>
+                </tr>
+            </thead>
+            
+        <tbody>
+            <tr>
+                <td> Participation </td>
+                <td><input type="text" id="participation" title="Enter participation score">/5
+                    <button value="Delete" onclick="deleteRow7(this)">Delete row</button></td>
+            </tr>
+        </tbody>
+        </table>
+    </div>
+    <br>
+
+
+    <div >
+        <label>Grade Percent: </label>
+        <input type="text" id="finalPercent" name="finalPercent" disabled>
+        <!---- <span id="finalPercent"></span> ---->
+        <br>
+        <!---to get a letter for grade -->
+        <labe>Grade Letter: </labe>
+        <input type="text" id="finalLetterGrade" name="finalLetterGrade" disabled>
+       <!----- <span id="finalLetterGrade"></span>----->
+    </div>
+
+    <p> Click the button to display the gradebook here!</p> 
+    
+    <button id="BtnSaveGrade" onclick="SaveGrade()" > Save a Grade </button> 
+
+    <input type="button" onclick="listAllGrades()" value="List all Grades" />
+    <br> <br> 
+    <span id="listGrades"></span>
+    <br /> <br/>
+    
+    <!--  <br>
+     <hr>
+    <button id="Btncalc" onclick="calculatGrade1()"> Calculate Your Grade </button> -->
+    
+
+  <!-----Grading Scale---------------------------------------------------------------------->
+
+    <br>
+            <div class="gradingScale">
+                <p><b> Total earned % points:  </b><br /> 
+                &nbsp;&nbsp;&nbsp; 30% of lab Assignments <br /> 
+                &nbsp;&nbsp;&nbsp; 10% of quizzes <br />
+                &nbsp;&nbsp;&nbsp; 30% of exams  <br /> 
+                &nbsp;&nbsp;&nbsp; 20% of project <br />
+                &nbsp;&nbsp;&nbsp; 10% of participation <br />
+                &nbsp;&nbsp;&nbsp; 5% of extra credit<br /> </p>
+            </div>
+    <br> 
+   
+
+    <!-- <input type="button" onclick="calculator()" value="Calculate Your Grade" /> 
+    <br>
+    <p> Your Final Grade Is: <br>
+    <span id="resultGrade"></span>
+    </p> --->
+    
+<!--table1-------------------------------------------------------------------------------------->
+    <p> <b> The grade is determined using the table below: </b> </p>
+        <table id="table1">
+            <tr> 
+            <td> <b> Earned % Points &ensp;</b> </td>
+            <td> <b> Grade &ensp; </b> </td>
+            </tr>
+            <tr> 
+                <td id="td1"> &#8805; 90 </td>
+                <td> A </td>   
+            </tr>
+            <tr> 
+                <td id="td1"> &#8805; 80 but &#60; 90 </td>
+                <td> B </td>   
+            </tr>
+            <tr> 
+                <td id="td1"> &#8805; 70 but &#60; 80 </td>
+                <td> C </td>   
+            </tr>
+            <tr> 
+                <td id="td1"> &#8805; 60 but &#60; 70 </td>
+                <td> D </td>   
+            </tr>
+            <tr> 
+                <td id="td1"> &#60; 60 </td>
+                <td> F </td>   
+            </tr>
+            
+        </table>
+        
+        <br>
+        
+        <br>
+        <hr>
+        
+
+         <footer>
+            Copyright &copy; Purdue University Northwest <br>
+           <a href="mailto:ghadir@pnw.edu">ghadir@pnw.edu</a>
+
+        <br><br>
+        <div>
+            <script>document.write("This page was last modifiad on: " + document.lastModified) </script>
+         </div>
+  </footer>
+    </main>
+    </div>
+</body>
+</html>
